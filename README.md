@@ -32,6 +32,7 @@ It includes code for training, testing, Weights & Biases sweeps, and final model
 | Weight Init | Kaiming |
 | Batch Norm | Enabled |
 | Data Augmentation | Enabled (Crop + Flip + Cutout) |
+| seed Config | seed=42 | 
 
 Best trained model checkpoint:  
 
@@ -92,9 +93,18 @@ Done. Best val_acc: 77.5
 python test.py --ckpt checkpoints/best.pt --activation gelu --batch-norm
 ```
 
+```
+Expected output
+My output when I ran the same
+/content/cs6886w_a1_vgg6_modular_OP
+TEST — loss 0.5739 | acc 81.47% | from ckpt checkpoints/best.pt
+(saved best val_acc: 77.50%)
+total 9.1M
+``` 
+
 
 ```
-In short
+In short for recreating
 
 git clone https://github.com/harieshwarg/cs6886w_a1_vgg6_modular_OP.git
 cd cs6886w_a1_vgg6_modular_OP
